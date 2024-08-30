@@ -1,211 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BNC</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <header>
-      <div class="content">
-        <nav>
-          <p class="brand" style="color: white;">Banco <strong>Nacional</strong> de Consoles</p>
-          <ul>
-            <li><a style="color: white;" href="#catalog">Catálogo</a></li>
-            <li><a style="color: white;" href="#about">Sobre</a></li>
-            <li><a style="color: white;" href="#contact">Contato</a></li>
-            <button style="color: white;">Login</button>
-          </ul>
-        </nav>
-        <div class="header-block">
-          <div class="text">
-            <h2>O Console Perfeito Para você!</h2>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BNC</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="javascript/script.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="content">
+      <nav>
+        <p class="brand" style="color: white;">Banco <strong>Nacional</strong> de Consoles</p>
+        <ul>
+          <li><a style="color: white;" href="#catalog">Catálogo</a></li>
+          <li><a style="color: white;" href="#about">Sobre</a></li>
+          <li><a style="color: white;" href="#contact">Contato</a></li>
+          <button id="login" class="loginEntrar" style="color: white;">Login</button>
+        </ul>
+      </nav>
+
+      <div class="header-block">
+        <div class="text">
+          <h2>O Console Perfeito Para você!</h2>
+          <p>
+            Grandes Descontos e Ofertas, Venha já e obtenha seu novo Console !!!
+            Aceitamos trocas!!
+          </p>
+        </div>
+        <img src="images/ps5.webp" alt="ps5" />
+      </div>
+    </div>
+  </header>
+  <section class="catalog" id="catalog">
+    <div class="content">
+      <div class="title-wrapper-catalog">
+        <p>Encontre o que Procura!</p>
+        <h3>Catálogo</h3>
+      </div>
+      <div class="filter-card">
+
+        <input type="text" class="search-input" placeholder="Qual console está procurando?" id="searchInput"
+          onkeyup="filterCatalog()" />
+
+      </div>
+      <div class="card-wrapper">
+        <div id="card1" class="card-item">
+          <div  class="editor">
+            <a  href="#" onclick="postEdit('card1')">
+              <img src="images/edit.png" alt="Botão" />
+          </a>
+          </div>
+          <img src="images/ps4.png" alt="ps4" />
+          <div class="card-content">
+            
+            <h3>Playstation 4</h3>
             <p>
-              Grandes Descontos e Ofertas, Venha já e obtenha seu novo Console !!!
-              Aceitamos trocas!!
+              Playstation 4 Slim com 1 TB de armazenamento.
             </p>
+          </div>
+          <button type="button">Comprar</button>
+        </div>
+          <div id="card2" class="card-item">
+            <div  class="editor">
+              <a  href="#" onclick="postEdit('card2')">
+                <img src="images/edit.png" alt="Botão" />
+            </a>
+            </div>
+          <img src="images/3DS.png" alt="3DS" />
+          <div class="card-content">
+            <h3>Nintendo 3DS</h3>
+            <p>
+              Nintendo 3DS Usado,
+              Aceitamos trocas!
+            </p>
+
+          </div>
+          <button type="button">Comprar</button>
+        </div>
+        <div id="card3" class="card-item">
+          <div  class="editor">
+            <a  href="#" onclick="postEdit('card3')">
+              <img src="images/edit.png" alt="Botão" />
+          </a>
+          </div>
+          <img src="images/nintendo-switch.png" alt="nintendo-switch" />
+          <div class="card-content">
+            <h3>Nintendo Switch</h3>
+            <p>
+              Nintendo Switch com mais de 1500 jogos instalados.
+            </p>
+
+          </div>
+          <button type="button">Comprar</button>
+        </div>
+        <div id="card4" class="card-item">
+          <div  class="editor">
+            <a  href="#" onclick="postEdit('card4')">
+              <img src="images/edit.png" alt="Botão" />
+          </a>
           </div>
           <img src="images/ps5.webp" alt="ps5" />
-        </div>
-      </div>
-    </header>
-    <section class="catalog" id="catalog">
-      <div class="content">
-        <div class="title-wrapper-catalog">
-          <p>Encontre o que Procura!</p>
-          <h3>Catálogo</h3>
-        </div>
-        <div class="filter-card">
-          <input
-            type="text"
-            class="search-input"
-            placeholder="Qual console está procurando?"
-          />
-          <button class="search-button">Pesquisar</button>
-        </div>
-        <div class="card-wrapper">
-          <div class="card-item">
-            <img src="images/ps4.png" alt="ps4" />
-            <div class="card-content">
-              <h3>Playstation 4</h3>
-              <p>
-                Playstation 4 Slim com 1 TB de armazenamento.</p>
-              
-            </div>
-            <button type="button">Comprar</button>
-          </div>
-          <div class="card-item">
-            <img src="images/3DS.png" alt="3DS" />
-            <div class="card-content">
-              <h3>Nintendo 3DS</h3>
-              <p>
-                Nintendo 3DS Usado,
-                Aceitamos trocas!
-              </p>
-              
-            </div>
-            <button type="button">Comprar</button>
-          </div>
-          <div class="card-item">
-            <img src="images/nintendo-switch.png" alt="nintendo-switch" />
-            <div class="card-content">
-              <h3>Nintendo Switch</h3>
-              <p>
-                Nintendo Switch com mais de 1500 jogos instalados.
-              </p>
-              
-            </div>
-            <button type="button">Comprar</button>
-          </div>
-          <div class="card-item">
-            <img src="images/ps5.webp" alt="ps5" />
-            <div class="card-content">
-              <h3>Playstation 5</h3>
-              <p>
-                Playstation 5 Novo, não aceitamos trocas!
-              </p>
-              
-            </div>
-            <button type="button">Comprar</button>
-          </div>
-          <div class="card-item">
-            <img src="images/gameboy.png" alt="Car" />
-            <div class="card-content">
-              <h3>Nintendo Gameboy</h3>
-              <p>
-                Nintendo Gameboy Usado Funcionando Perfeitamente.
-              </p>
-              
-            </div>
-            <button type="button">Comprar</button>
-          </div>
-          <div class="card-item">
-            <img src="images/nintendo-1996.png" alt="Car" />
-            <div class="card-content">
-              <h3>Nintendo 1996</h3>
-              <p>
-                Nintendo 96 restaurado, 0 jogos incluso.
-              </p>
-              
-            </div>
-            <button type="button">Comprar</button>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <div class="content">
-        <div class="title-wrapper-about">
-          <p>Saiba sobre a empresa</p>
-          <h3>Sobre nós</h3>
-        </div>
-        <div class="about-content">
-          <div class="left">
-            <img src="images/BNC.png" alt="About" />
-          </div>
-          <div class="right">
-            <h3>Tecnologia com Paixão: Consoles que Fazem História</h3>
+          <div class="card-content">
+            <h3>Playstation 5</h3>
             <p>
-
-                Na BNC, somos movidos por um amor incondicional pela tecnologia e por tudo o que ela representa. Desde o primeiro console que capturou a imaginação do mundo até os modelos mais recentes que continuam a redefinir o entretenimento, nossa missão é manter viva a magia dos jogos eletrônicos, proporcionando a você a oportunidade de explorar cada fase dessa jornada incrível.
-                
-            <p>    Especializados em consoles de todos os tempos, oferecemos uma vasta seleção de dispositivos novos, usados e restaurados com o máximo cuidado e atenção aos detalhes. Seja um clássico retrô ou o mais recente lançamento, cada console em nosso catálogo é uma peça cuidadosamente selecionada, revisada e preparada para entregar uma experiência de jogo inigualável.</p>
-                
-            <p>    Nosso compromisso é proporcionar a você, apaixonado por tecnologia e jogos, a oportunidade de reviver momentos icônicos e criar novas memórias. Aqui, celebramos todas as eras dos videogames, com a certeza de que a qualidade e a paixão com que tratamos cada console se refletem na satisfação de cada cliente.</p>
-                
-            <p>    Na BNC, acreditamos que cada console tem uma história para contar, e estamos aqui para ajudar você a continuar essa história. Venha fazer parte dessa aventura com a gente!
+              Playstation 5 Novo, não aceitamos trocas!
             </p>
           </div>
+          <button type="button">Comprar</button>
         </div>
-      </div>
-    </section>
+        <div id="card5" class="card-item">
+          <div  class="editor">
+            <a  href="#" onclick="postEdit('card5')">
+              <img src="images/edit.png" alt="Botão" />
+          </a>
+          </div>
+          <img src="images/gameboy.png" alt="Car" />
+          <div class="card-content">
+            <h3>Nintendo Gameboy</h3>
+            <p>
+              Nintendo Gameboy Usado Funcionando Perfeitamente.
+            </p>
 
-    <section class="contact" id="contact">
-      <div class="content">
-        <div class="title-wrapper-contact">
-          <p>Precisa de Ajuda?</p>
-          <h3>Contatos</h3>
+          </div>
+          <button type="button">Comprar</button>
         </div>
-        <div class="contact-card-block">
-          <div class="contact-card-item">
-            <img src="images/whatsapp.png" alt="contact" />
-            <div class="contact-text-content">
-              <h3>WhatsApp</h3>
-              <p>(41) 99999-9999</p>
-            </div>
+        <div id="card6" class="card-item">
+          <div  class="editor">
+            <a  href="#" onclick="postEdit('card6')">
+              <img src="images/edit.png" alt="Botão" />
+          </a>
           </div>
-          <div class="contact-card-item">
-            <img src="images/telefone.png" alt="contact" />
-            <div class="contact-text-content">
-              <h3>Telefone</h3>
-              <p>+55 ( 41 )3555-5555</p>
-            </div>
-          </div>
-          <div class="contact-card-item">
-            <img src="images/gmail.png" alt="contact" />
-            <div class="contact-text-content">
-              <h3>Gmail</h3>
-              <p>BNCgmail@gmail.com</p>
-            </div>
-          </div>
-          <div class="contact-card-item">
-            <img src="images/telegram.png" alt="contact" />
-            <div class="contact-text-content">
-              <h3>Telegram</h3>
-              <p>(41) 88888-8888</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          <img src="images/nintendo-1996.png" alt="Car" />
+          <div class="card-content">
+            <h3>Nintendo 1996</h3>
+            <p>
+              Nintendo 96 restaurado, 0 jogos incluso.
+            </p>
 
-    <footer>
-      <div class="main">
-        <div class="content footer-links">
-          <div class="footer-company">
-            <h4>Compania</h4>
-            <h6>Termos de Privacidade</h6>
-            <h6>Patrocinadores</h6>
           </div>
-          <div class="footer-rental">
-            <h4>Suporte</h4>
-            <h6>ChatBot</h6>
-            <h6>Atendimento</h6>
+          <button type="button">Comprar</button>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="content">
+      <div class="title-wrapper-about">
+        <p>Saiba sobre a empresa</p>
+        <h3>Sobre nós</h3>
+      </div>
+      <div class="about-content">
+        <div class="left">
+          <img src="images/BNC.png" alt="About" />
+        </div>
+        <div class="right">
+          <h3>Tecnologia com Paixão: Consoles que Fazem História</h3>
+          <p>
+
+            Na BNC, somos movidos por um amor incondicional pela tecnologia e por tudo o que ela representa. Desde o
+            primeiro console que capturou a imaginação do mundo até os modelos mais recentes que continuam a redefinir o
+            entretenimento, nossa missão é manter viva a magia dos jogos eletrônicos, proporcionando a você a
+            oportunidade de explorar cada fase dessa jornada incrível.
+
+          <p> Especializados em consoles de todos os tempos, oferecemos uma vasta seleção de dispositivos novos, usados
+            e restaurados com o máximo cuidado e atenção aos detalhes. Seja um clássico retrô ou o mais recente
+            lançamento, cada console em nosso catálogo é uma peça cuidadosamente selecionada, revisada e preparada para
+            entregar uma experiência de jogo inigualável.</p>
+
+          <p> Nosso compromisso é proporcionar a você, apaixonado por tecnologia e jogos, a oportunidade de reviver
+            momentos icônicos e criar novas memórias. Aqui, celebramos todas as eras dos videogames, com a certeza de
+            que a qualidade e a paixão com que tratamos cada console se refletem na satisfação de cada cliente.</p>
+
+          <p> Na BNC, acreditamos que cada console tem uma história para contar, e estamos aqui para ajudar você a
+            continuar essa história. Venha fazer parte dessa aventura com a gente!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="content">
+      <div class="title-wrapper-contact">
+        <p>Precisa de Ajuda?</p>
+        <h3>Contatos</h3>
+      </div>
+      <div class="contact-card-block">
+        <div class="contact-card-item">
+          <img src="images/whatsapp.png" alt="contact" />
+          <div class="contact-text-content">
+            <h3>WhatsApp</h3>
+            <p>(41) 99999-9999</p>
           </div>
-          <div class="footer-social">
-            <h4>Redes Sociais</h4>
-            <div class="social-icons">
-              <img src="images/instagram.png" alt="Instagram" />
-              <img src="images/facebook.png" alt="Facebook" />
-            </div>
+        </div>
+        <div class="contact-card-item">
+          <img src="images/telefone.png" alt="contact" />
+          <div class="contact-text-content">
+            <h3>Telefone</h3>
+            <p>+55 ( 41 )3555-5555</p>
+          </div>
+        </div>
+        <div class="contact-card-item">
+          <img src="images/gmail.png" alt="contact" />
+          <div class="contact-text-content">
+            <h3>Gmail</h3>
+            <p>BNCgmail@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-card-item">
+          <img src="images/telegram.png" alt="contact" />
+          <div class="contact-text-content">
+            <h3>Telegram</h3>
+            <p>(41) 88888-8888</p>
           </div>
         </div>
       </div>
-      <div class="last">Bruno Pires - Canal DevSuperior usado como base @2024</div>
-    </footer>
-  </body>
+    </div>
+  </section>
+
+  <footer>
+    <div class="main">
+      <div class="content footer-links">
+        <div class="footer-company">
+          <h4>Compania</h4>
+          <h6>Termos de Privacidade</h6>
+          <h6>Patrocinadores</h6>
+        </div>
+        <div class="footer-rental">
+          <h4>Suporte</h4>
+          <h6>ChatBot</h6>
+          <h6>Atendimento</h6>
+        </div>
+        <div class="footer-social">
+          <h4>Redes Sociais</h4>
+          <div class="social-icons">
+            <img src="images/instagram.png" alt="Instagram" />
+            <img src="images/facebook.png" alt="Facebook" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="last">Bruno Pires - Canal DevSuperior usado como base @2024</div>
+  </footer>
+</body>
+
 </html>

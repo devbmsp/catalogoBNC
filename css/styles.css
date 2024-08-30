@@ -159,8 +159,14 @@ section .filter-card {
   border-radius: 4px 0px 0px 4px;
   text-indent: 10px;
 }
+.editor {
+  width: 20%;
+  height: 40%;
+  position: relative;
+  margin-left: 85%;
+}
 
-.search-button {
+.edit {
   width: 150px;
   height: 50px;
   border-radius: 0px 4px 4px 0px;
@@ -172,7 +178,7 @@ section .filter-card {
   transition: 0.2s ease;
 }
 
-.search-button:hover {
+.edit:hover {
   background: #dedede;
   color: var(--blue);
 }
@@ -438,7 +444,7 @@ footer .last {
     min-width: 240px;
   }
 
-  .search-button {
+  .search {
     max-width: 150px;
     min-width: 80px;
   }
@@ -492,4 +498,43 @@ footer .last {
     flex-direction: column;
     padding-left: 10%;
   }
+}
+
+.modal {
+  width: 90%!important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.modal label {
+  font-size: 14px;
+  width: 100%;
+}
+
+.modal input,select {
+  width: 100%;
+  outline: none;
+  padding: 5px 10px; 
+  width: 100%;
+  margin-bottom: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.modal button {
+  width: 100%;
+  margin: 10px auto;
+  outline: none;
+  border-radius: 20px; 
+  padding: 5px 10px; 
+  width: 100%;
+  border: none;
+  background-color: rgb(57, 57, 226);
+  color: white;
 }
