@@ -45,8 +45,27 @@
 
         <input type="text" class="search-input" placeholder="Qual console está procurando?" id="searchInput"
           onkeyup="filterCatalog()" />
-
+          <button onclick="adicionarPost()" id="addPost" class="cardPost">Adicionar Post</button>
       </div>
+
+      <div id="addPostModal" class="modal-container">
+        <div class="modal">
+          <h2>Adicionar Novo Post</h2>
+          <form id="addPostForm">
+            <label for="postTitle">Título:</label>
+            <input type="text" id="postTitle" required>
+            <label for="postDescription">Descrição:</label>
+            <textarea id="postDescription" rows="3" required></textarea>
+            <label for="postImage">URL da Imagem:</label>
+            <input type="text" id="postImage" required>
+            <button type="button" onclick="saveNewPost()">Salvar</button>
+            <button type="button" onclick="closeAddPostModal()">Cancelar</button>
+          </form>
+        </div>
+      </div>
+      <div class="card-wrapper"></div>
+      
+    
       <div class="card-wrapper">
         <div id="card1" class="card-item">
           <div  class="editor">
